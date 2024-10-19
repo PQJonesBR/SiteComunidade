@@ -1,5 +1,6 @@
 # SiteComunidade
 Site da Comunidade Solus IT
+
 Projeto desenvolvido em Python, Flask, Bootstrap
 
 ## Criar e ativar o Virtual Environment antes de rodar a aplicação
