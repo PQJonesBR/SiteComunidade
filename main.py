@@ -4,6 +4,10 @@ app = Flask(__name__)
 
 lista_usuarios = ["Patrick", "João", "Augusto", "Marcelo", "Clarisse"]
 
+# Entrar no temrinal e digitar python, em seguida import secrets
+# Criar a chave com o comando secrets.token_hex(16)
+app.config['SECRET_KEY'] = 'b1a7a73d7e029b82fe23fe102c56d0c2'
+
 @app.route("/")
 def home():
     return render_template('home.html')
