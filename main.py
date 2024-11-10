@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from forms import FormCriarConta, FormLogin
 
 app = Flask(__name__)
 
@@ -22,7 +23,9 @@ def usuarios():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    form_login = FormLogin()
+    form_criarconta = FormCriarConta()
+    return render_template('login.html', form_login = form_login, form_criarconta = form_criarconta)
 
 # debug=True -> garante que rode sem precisar pausar e rodar de novo
 if __name__ == '__main__':
